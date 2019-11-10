@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p v-for="person in persons">personName:{{person.name}} personid:{{person.id}}</p>
+        -------------------
+        <p v-for="(person,num) in persons">personname:{{person.name}} &nbsp; &nbsp;personid:{{person.id}}&nbsp; &nbsp;索引下标:{{num+1}}</p>
+    </div>
+
+<script>
+
+    var v =new Vue({
+        el:"#app",
+        data:{
+            persons:[{id:1,name:"lisi"},{id:2,name:"jiang"},{id:3,name:"xiang"}]
+        }
+
+
+    });
+</script>
+</body>
+</html>
